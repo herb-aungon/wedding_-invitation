@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Chella + He-i</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script src="{{url_for('static', filename='wed.js') }}"></script>
+
+    <!-- <script> -->
+    <!-- $( function() { -->
+    <!-- $( "#alert" ).dialog(); -->
+    <!-- } ); -->
+    <!-- </script> -->
+
+
+    <!-- <script src="/static/bower_components/webcomponentsjs/webcomponents-lite.js"></script> -->
+    <!-- <link rel="import" href="/static/bower_components/polymer/polymer.html"></link> -->
+    <!-- <link rel="import" href="/static/bower_components/paper-input/paper-input.html"></link> -->
+    <!-- <link rel="import" href="/static/bower_components/iron-elements/iron-elements.html"></link> -->
+    <!-- <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner.html"></link> -->
+    <!-- <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner-behavior.html"></link> -->
+    <!-- <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner-lite.html"></link> -->
+    <!-- <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner-styles.html"></link> -->
+
+
+
+
+    <link rel="import" href="/static/bower_components/paper-button/paper-button.html"></link>
+
+    <link href="{{url_for('static', filename='wed.css') }}" rel="stylesheet">
+
+    <link href="//fonts.googleapis.com/css?family=Sarina" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <style>
+      .head1 {
+      font-family:'Sarina';
+      }
+
+      
+    </style>
+
+
+
+
+  </head>
+
+
+
+
+  <body>
+    <h1 class="head1">Chella & He-i</h1>
+    <h3 class="head2">15th of May 2017| Monday 14:00 </br> La Familia Resort | Samal Island</h3>
+    <div class="container">
+      <div id="dialog-message" title="Download complete">
+	<p id="message">
+	  <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+	  Your files have downloaded successfully into the My Downloads folder.
+	</p>
+	<p>
+	  <a href>>>Click me to close<<</a>
+	</p>
+      </div>
+
+      <form action="#" method="post" class="rsvp-form" is="iron-form" method="get" action="/" id="eventsDemo">
+
+	<h2>Yes, I'll Be There</h2>
+
+	
+
+
+	<!-- <paper-input class="paper_input" name="First Name" label="First name" required auto-validate></paper-input> -->
+	<input class="invi_fields" type="text" id="first_name" name="First Name" placeholder="First Name" title="Please enter your First Name" required="">
+	<input type="text" id="last_name" name="Last Name" placeholder="Last Name" title="Please enter your Last Name" required="">
+	<input type="number" id="mobile" name="Mobile Number" placeholder="Mobile #" title="Mobile Number">
+	<input type="Number" id="guest" name="guests" placeholder="No. of guests attending" title="Number" required="">
+	<textarea id="message" name="message" placeholder="YOUR MESSAGE" title="Enter your Message"></textarea>
+
+	<input type="submit" class="submit_invi w3-button" id="send" value="Submit" >
+
+	</form>
+
+
+
+
+    </div>
+
+
+    <p class="footer">© 2017 | Created by Herbert I Aungon</p>        
+        
+
+
+
+  </body>
+
+</html>
+
+
+
+
+
+      <!-- <form is="iron-form" method="get" action="/" id="eventsDemo"> -->
+      <!--   <paper-input name="username" label="Username" required auto-validate></paper-input> -->
+      <!--   <paper-input name="password" label="Password" type="password" required auto-validate></paper-input> -->
+      <!--   <paper-button raised class="custom green" onclick="_delayedSubmit(event)" id="eventsDemoSubmit"> -->
+      <!--     <paper-spinner id="spinner" hidden></paper-spinner>Submit</paper-button> -->
+      <!--   <paper-button raised class="custom orange" onclick="_reset(event)">Reset</paper-button> -->
+      <!--   <div class="output"></div> -->
+      <!-- </form> -->
+

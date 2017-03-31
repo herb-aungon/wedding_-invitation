@@ -1,0 +1,66 @@
+/* @media only screen and (min-width : 320px) and (max-width : 480px) { */
+/*     background: url(images/main_background.jpg) no-repeat center center fixed; */
+/* } */
+
+
+
+/* html, body { */
+/*     top:0; */
+/*     bottom:0; */
+/*     left:0; */
+/*     right:0; */
+/*     position:fixed; */
+/*     background: url(images/main_background.jpg) no-repeat center center fixed; */
+/*     -webkit-background-size: cover; */
+/*     -moz-background-size: cover; */
+/*     -o-background-size: cover; */
+/*     background-size: cover; */
+/*     height: 100000px; */
+/*     width:auto; */
+
+
+/* } */
+
+body {
+  background-color:none;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+  /* min-height: 100%; */
+
+}
+
+
+html {
+  background: url(images/main_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* height: 100%; */
+}
+
+
+
+
+#container {
+    border-width: 5px;
+    background-color:white;
+    opacity: 0.8;
+    width: 600px;
+    height: 300px;
+margin: 0 auto;
+    /* margin-top: 100px; */
+    /* margin-bottom: 100px; */
+    /* margin-right: 100px; */
+    /* margin-left: 100px; */
+
+
+}
+
+/* .footer_container { */
+/*     margin: auto; */
+/*     width: 60%; */
+/*     padding: 10px; */
+/* } */
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scheduling Portal</title>
+    <!-- Bootstrap core CSS -->
+
+    <!-- CSS file for the Form -->
+    <!-- <link href="{{url_for('static', filename='main.css') }}" rel="stylesheet"> -->
+    <script src="/static/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- <link rel="import" href="/static/bower_components/webcomponentsjs/webcomponents-lite.js"></link> -->
+    <link rel="import" href="/static/bower_components/polymer/polymer.html"></link>
+    <link rel="import" href="/static/bower_components/paper-input/paper-input.html"></link>
+    <link rel="import" href="/static/bower_components/iron-elements/iron-elements.html"></link>
+    <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner.html"></link>
+    <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner-behavior.html"></link>
+    <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner-lite.html"></link>
+    <link rel="import" href="/static/bower_components/paper-spinner/paper-spinner-styles.html"></link>
+    <link rel="import" href="/static/bower_components/paper-button/paper-button.html"></link>
+
+
+    <div class="container">
+
+      <style is="custom-style">
+	paper-input {
+	width: 500px;
+	height: 100px;
+	}
+      </style>
+
+
+<style is="custom-style">
+  paper-button.custom {
+    --paper-button-ink-color: var(--paper-pink-a200);
+    /* These could also be individually defined for each of the
+      specific css classes, but we'll just do it once as an example */
+    --paper-button-flat-keyboard-focus: {
+      background-color: var(--paper-pink-a200);
+      color: white !important;
+    };
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.custom:hover {
+    background-color: var(--paper-indigo-100);
+  }
+  paper-button.pink {
+    color: var(--paper-pink-a200);
+
+  }
+  paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.green {
+    background-color: var(--paper-green-500);
+    color: white;
+  }
+  paper-button.green[active] {
+    background-color: var(--paper-red-500);
+  }
+  paper-button.disabled {
+    color: white;
+  }
+</style>
+
+
+      <form is="iron-form" method="get" action="/" id="eventsDemo">
+	<paper-input name="username" label="Username" required auto-validate></paper-input>
+	<paper-input name="password" label="Password" type="password" required auto-validate></paper-input>
+	<paper-button raised class="custom green" onclick="_delayedSubmit(event)" id="eventsDemoSubmit">
+	  <paper-spinner id="spinner" hidden></paper-spinner>Submit</paper-button>
+	<paper-button raised class="custom orange" onclick="_reset(event)">Reset</paper-button>
+	<div class="output"></div>
+      </form>
+
+      <script>
+	<!-- eventsDemo.addEventListener('change', function(event) { -->
+	<!-- // Validate the entire form to see if we should enable the `Submit` button. -->
+	<!-- eventsDemoSubmit.disabled = !eventsDemo.validate(); -->
+	<!-- }); -->
+	function _delayedSubmit(event) {
+	spinner.active = true;
+	spinner.hidden = false;
+	eventsDemoSubmit.disabled = true;
+	// Simulate a slow server response.
+	setTimeout(function() {
+	Polymer.dom(event).localTarget.parentElement.submit();
+	}, 1000);
+	}
+	function _reset(event) {
+	var form = Polymer.dom(event).localTarget.parentElement
+	form.reset();
+	form.querySelector('.output').innerHTML = '';
+  }
+	document.getElementById('eventsDemo').addEventListener('iron-form-submit', function(event) {
+	spinner.active = false;
+	spinner.hidden = true;
+	eventsDemoSubmit.disabled = false;
+	this.querySelector('.output').innerHTML = JSON.stringify(event.detail);
+	});
+      </script>
+
+
+    </div>
+
+
+    <!-- <footer class="footer"> -->
+    <!--   <div class="footer_container"> -->
+    <!-- 	<p class="text-muted">&copy; Herbert Aungon 2014</p> -->
+    <!--   </div> -->
+    <!-- </footer> -->
+
+
+</body>
+</html>
